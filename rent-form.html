@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rent Form - Equiply</title>
+</head>
+<body>
+  <h1>Request to Rent</h1>
+  <form name="rent-request" method="POST" data-netlify="true" action="thank-you.html">
+    <input type="hidden" name="form-name" value="rent-request">
+    <input type="text" name="name" placeholder="Your Name" required><br>
+    <input type="email" name="email" placeholder="Your Email" required><br>
+    <input type="text" name="tool" placeholder="Tool Name (auto-filled)" value=""><br>
+    <input type="date" name="start_date" required><br>
+    <input type="date" name="end_date" required><br>
+    <input type="text" name="notes" placeholder="Delivery request or pickup notes"><br>
+    <button type="submit">Submit Request</button>
+  </form>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const tool = urlParams.get('tool');
+    if (tool) {
+      document.querySelector('input[name="tool"]').value = tool;
+    }
+  </script>
+</body>
+</html>

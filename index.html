@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Equiply - Rent Tools & Equipment Locally</title>
+</head>
+<body>
+  <h1>Equiply</h1>
+  <p>Rent farm and construction equipment from locals near you.</p>
+  <a href="listings.html">View Equipment Listings</a>
+  <h2>Join the Tool Owner Waitlist</h2>
+  <form name="tool-owner" method="POST" data-netlify="true" action="thank-you.html">
+    <input type="hidden" name="form-name" value="tool-owner">
+    <input type="text" name="name" placeholder="Name" required><br>
+    <input type="email" name="email" placeholder="Email" required><br>
+    <input type="text" name="tool" placeholder="Tool Type" required><br>
+    <button type="submit">Join Waitlist</button>
+  </form>
+</body>
+</html>
