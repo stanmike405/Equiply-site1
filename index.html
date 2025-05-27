@@ -4,19 +4,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Equiply - Rent Tools & Equipment Locally</title>
+  <title>Equiply - Rent Tools & Equipment</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html { height: 100%; font-family: Arial, sans-serif; }
+    .hero {
+      background: url('cover.jpg') center center / cover no-repeat;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+    }
+    .overlay {
+      position: absolute;
+      background-color: rgba(0,0,0,0.5);
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 1;
+    }
+    .hero-content {
+      z-index: 2;
+      padding: 20px;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+    .button {
+      background: #3b82f6;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>Equiply</h1>
-  <p>Rent farm and construction equipment from locals near you.</p>
-  <a href="listings.html">View Equipment Listings</a>
-  <h2>Join the Tool Owner Waitlist</h2>
-  <form name="tool-owner" method="POST" data-netlify="true" action="thank-you.html">
-    <input type="hidden" name="form-name" value="tool-owner">
-    <input type="text" name="name" placeholder="Name" required><br>
-    <input type="email" name="email" placeholder="Email" required><br>
-    <input type="text" name="tool" placeholder="Tool Type" required><br>
-    <button type="submit">Join Waitlist</button>
-  </form>
+  <div class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>EQUIPLY</h1>
+      <p>Tools and equipment when you need them. From people you trust.</p>
+      <a href="listings.html" class="button">View Listings</a>
+    </div>
+  </div>
 </body>
 </html>
